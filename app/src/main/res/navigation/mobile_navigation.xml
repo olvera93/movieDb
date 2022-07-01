@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.olvera.moviedb.ui.home.HomeFragment"
+        android:label="@string/title_movie"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/next_fragment"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_now_playing"
+        android:name="com.olvera.moviedb.ui.playing.PlayingNowFragment"
+        android:label="@string/title_now_playing"
+        tools:layout="@layout/fragment_playing_now">
+
+        <action
+            android:id="@+id/next_fragment"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_movie_top_rated"
+        android:name="com.olvera.moviedb.ui.movieRated.MovieRatedFragment"
+        android:label="@string/title_movie_top_rated"
+        tools:layout="@layout/fragment_movie_rated" >
+
+        <action
+            android:id="@+id/next_fragment"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.olvera.moviedb.ui.detail.DetailFragment"
+        android:label="@string/title_detail"
+        tools:layout="@layout/fragment_movie_detail" />
+
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.olvera.moviedb.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/search_fragment" >
+
+        <action
+            android:id="@+id/next_fragment"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourite"
+        android:name="com.olvera.moviedb.ui.favourite.FavouriteFragment"
+        android:label="@string/title_favourite"
+        tools:layout="@layout/fragment_favourite" >
+
+        <action
+            android:id="@+id/next_fragment"
+            app:destination="@id/navigation_detail"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>
+
+

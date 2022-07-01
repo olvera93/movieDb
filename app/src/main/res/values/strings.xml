@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">MovieDb</string>
+    <string name="title_movie">Popular</string>
+    <string name="title_movie_top_rated">Top Rated</string>
+    <string name="title_search">Search</string>
+    <string name="title_date">Date: </string>
+    <string name="title_vote">Vote: </string>
+    <string name="title_trailer">Trailer</string>
+    <string name="play_image">Play Image</string>
+
+    <string name="title_detail">Detail Movies</string>
+    <string name="search_movie">Search Movie</string>
+    <string name="favorite_movie_added">Movie added to favorites</string>
+    <string name="favorite_movie_removed">Movie removed from favorites</string>
+
+    <string name="title_favourite">Favourite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_now_playing">Now</string>
+
+</resources>

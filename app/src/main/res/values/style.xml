@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SpecificCornerCut">
+        <item name="cornerSizeTopRight">25dp</item>
+        <item name="cornerFamilyTopRight">cut</item>
+        <item name="cornerSizeBottomLeft">25dp</item>
+        <item name="cornerFamilyBottomLeft">cut</item>
+    </style>
+
+    <style name="RoundedSquare">
+        <item name="cornerSize">40%</item>
+    </style>
+
+</resources>
