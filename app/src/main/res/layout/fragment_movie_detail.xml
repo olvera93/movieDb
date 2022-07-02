@@ -188,14 +188,14 @@
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:id="@+id/likeImageView"
-                        android:layout_width="69dp"
-                        android:layout_height="59dp"
+                        android:layout_width="56dp"
+                        android:layout_height="40dp"
                         android:layout_margin="16dp"
                         android:layout_marginTop="56dp"
                         android:layout_weight="1"
                         app:layout_constraintBottom_toTopOf="@+id/viewDivider"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="0.978"
                         app:layout_constraintStart_toEndOf="@+id/imgPoster"
                         app:layout_constraintTop_toBottomOf="@+id/tvMovieRate"
                         app:layout_constraintVertical_bias="1.0"

@@ -84,17 +84,12 @@ class DetailViewModel(application: Application): AndroidViewModel(application) {
                 .alpha(0f)
                 .setDuration(200)
                 .setListener(object : AnimatorListenerAdapter() {
-
                     override fun onAnimationEnd(animator: Animator) {
-
                         imageView.setImageResource(R.drawable.twitter_like)
                         imageView.alpha = 1f
                     }
-
                 })
-
         }
-
         return !like
     }
 

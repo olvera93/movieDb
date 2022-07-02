@@ -19,6 +19,7 @@ class PlayingNowViewModel(application: Application): AndroidViewModel(applicatio
     private val disposable = CompositeDisposable()
 
     val moviewPlayingNow = MutableLiveData<List<Movie>>()
+    val loadingMovies = MutableLiveData<Boolean>()
 
     fun getMoviePlayingNow(){
         disposable.add(
@@ -28,6 +29,7 @@ class PlayingNowViewModel(application: Application): AndroidViewModel(applicatio
                 .subscribeWith(object : DisposableSingleObserver<MovieResponse>() {
                     override fun onSuccess(t: MovieResponse) {
                         moviewPlayingNow.value = t.results
+                        loadingMovies.value = false
                         Log.i("NOW PLAYING VIEW MODEL", "WORKING")
                     }
 

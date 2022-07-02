@@ -18,6 +18,7 @@ class MovieRatedViewModel(application: Application) : AndroidViewModel(applicati
     private val disposable = CompositeDisposable()
 
     val movieRated = MutableLiveData<List<Movie>>()
+    val loadingMovies = MutableLiveData<Boolean>()
 
     fun getMovieRated() {
         disposable.add(
@@ -27,6 +28,7 @@ class MovieRatedViewModel(application: Application) : AndroidViewModel(applicati
                     .subscribeWith(object : DisposableSingleObserver<MovieResponse>(){
                         override fun onSuccess(t: MovieResponse) {
                             movieRated.value = t.results
+                            loadingMovies.value = false
                             Log.i("POPULAR VIEW MODEL", "WORKING")
                         }
 

@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.olvera.moviedb.R
 import com.olvera.moviedb.databinding.FragmentPlayingNowBinding
 import com.olvera.moviedb.util.BaseFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_playing_now.*
+import java.util.*
 
 class PlayingNowFragment : BaseFragment<FragmentPlayingNowBinding, PlayingNowViewModel>() {
 

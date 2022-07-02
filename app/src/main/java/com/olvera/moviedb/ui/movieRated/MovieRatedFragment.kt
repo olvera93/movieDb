@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.olvera.moviedb.R
 
 import com.olvera.moviedb.util.BaseFragment
 import com.olvera.moviedb.databinding.FragmentMovieRatedBinding
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_movie_rated.*
 
 class MovieRatedFragment: BaseFragment<FragmentMovieRatedBinding, MovieRatedViewModel>() {
@@ -42,6 +44,17 @@ class MovieRatedFragment: BaseFragment<FragmentMovieRatedBinding, MovieRatedView
                 Navigation.findNavController(view)
                     .navigate(R.id.next_fragment, bundle)            }
         }
+
+        viewModel.loadingMovies.observe(viewLifecycleOwner, Observer { loadingMovies ->
+            loadingMovies?.let {
+                if (it){
+                    progressBar.visibility = View.VISIBLE
+                    recyclerViewTopRated.visibility = View.GONE
+                }else{
+                    progressBar.visibility = View.GONE
+                }
+            }
+        })
 
 
     }
